@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./deploy
+      dockerfile: Dockerfile
+    image: backend
+    restart: unless-stopped
+    ports:
+      - 8011:80
+    volumes:
+      - /home/optimus/dipesh/all_model:/usr/src/app

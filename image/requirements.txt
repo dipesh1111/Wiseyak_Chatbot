@@ -1,0 +1,17 @@
+python-dotenv
+accelerate
+protobuf
+scipy
+sentencepiece
+llama-index==0.9.28.post2
+langchain==0.1.1
+langchain-experimental
+PyMuPDF
+sentence-transformers
+safetensors
+ninja
+optimum
+huggingface-hub
+text_generation
+weaviate-client
+ujson
