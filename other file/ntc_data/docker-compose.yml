@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+  weaviate:
+    image: semitechnologies/weaviate:1.23.0
+    container_name: ntc_DB
+    ports:
+    - 8029:8080
+    - 50052:50051
+    restart: unless-stopped
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/ntc1'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      CLUSTER_HOSTNAME: 'node1'
+      ASYNC_INDEXING: 'true'
+      PERSISTENCE_LSM_ACCESS_STRATEGY: 'pred'
+      GOMAXPROCS: 'NUMBER_OF_CPU_CORES'
+      LIMIT_RESOURCES: 'true'
+      GOMEMLIMIT: '4096MiB'
