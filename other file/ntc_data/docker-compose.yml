@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   weaviate:
-    image: semitechnologies/weaviate:1.23.0
+    image: cr.weaviate.io/semitechnologies/weaviate:1.23.0
     container_name: ntc_DB
     ports:
     - 8029:8080
